@@ -1,3 +1,7 @@
+using MySql.Data.MySqlClient;
+using System;
+using System.Windows.Forms;
+
 namespace ATIVIDADE_AVALIATIVA
 {
     public partial class home : Form
@@ -10,7 +14,6 @@ namespace ATIVIDADE_AVALIATIVA
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
@@ -29,14 +32,15 @@ namespace ATIVIDADE_AVALIATIVA
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            var strConexao = "server=localhost;uid=root;database=CadastroDePessoas";
+            var conexao = new MySqlConnection(strConexao);
+            conexao.Open();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             cadastrar cadastro = new cadastrar();
             cadastro.Show();
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -57,9 +61,3 @@ namespace ATIVIDADE_AVALIATIVA
         }
     }
 }
-
-
-//创创创创创创创创创创创创
-
-
-
