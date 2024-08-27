@@ -12,12 +12,12 @@ namespace ATIVIDADE_AVALIATIVA.Models
     public class EnderecoModel
     {
       public int idEndereco  { get; set; }
-      public string  nomeDaRua { get; set; }
-      public string bairro { get; set; }
-      public string cidade { get; set; }
-      public int numero { get; set; }
-      public string estado { get; set; }
-      public string cep { get; set; }
-      public int idPessoa { get; set; }   
+      public string  NomeDaRua { get; set; }
+      public string Bairro { get; set; }
+      public string Cidade { get; set; }
+      public int Numero { get; set; }
+      public string Estado { get; set; }
+      public string Cep { get; set; }
+      public int IdPessoa { get; set; }   
     }
 }
