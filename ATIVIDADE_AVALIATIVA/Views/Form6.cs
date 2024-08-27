@@ -51,5 +51,42 @@ namespace ATIVIDADE_AVALIATIVA
         {
             this.Close();
         }
+
+        private void cbEstadoCivil_Enter(object sender, EventArgs e)
+        {
+            // Limpa o texto da ComboBox ao entrar
+            cbEstadoCivil.Text = "";
+
+            // Verifica qual RadioButton está marcado
+            if (radioButtonSolteiro.Checked)
+            {
+                cbEstadoCivil.Text = "Solteiro";
+            }
+            else if (radioButtonCasado.Checked)
+            {
+                cbEstadoCivil.Text = "Casado";
+            }
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void radioButtonSolteiro_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBairro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

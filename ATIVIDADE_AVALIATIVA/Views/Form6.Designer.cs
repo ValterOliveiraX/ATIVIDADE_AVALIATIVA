@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cadastrar));
             groupBox1 = new GroupBox();
             cbEstadoCivil = new GroupBox();
-            radioButton4 = new RadioButton();
-            radioButton3 = new RadioButton();
+            radioButtonSolteiro = new RadioButton();
+            radioButtonCasado = new RadioButton();
             cbSexo = new GroupBox();
             radioBtnMasculino = new RadioButton();
             radioBtnFeminino = new RadioButton();
@@ -93,36 +93,38 @@
             // 
             // cbEstadoCivil
             // 
-            cbEstadoCivil.Controls.Add(radioButton4);
-            cbEstadoCivil.Controls.Add(radioButton3);
+            cbEstadoCivil.Controls.Add(radioButtonSolteiro);
+            cbEstadoCivil.Controls.Add(radioButtonCasado);
             cbEstadoCivil.Location = new Point(421, 51);
             cbEstadoCivil.Name = "cbEstadoCivil";
             cbEstadoCivil.Size = new Size(151, 40);
             cbEstadoCivil.TabIndex = 4;
             cbEstadoCivil.TabStop = false;
             cbEstadoCivil.Text = "Estado civil";
+            cbEstadoCivil.Enter += cbEstadoCivil_Enter;
             // 
-            // radioButton4
+            // radioButtonSolteiro
             // 
-            radioButton4.AutoSize = true;
-            radioButton4.Location = new Point(76, 14);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(65, 19);
-            radioButton4.TabIndex = 13;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Solteiro";
-            radioButton4.UseVisualStyleBackColor = true;
+            radioButtonSolteiro.AutoSize = true;
+            radioButtonSolteiro.Location = new Point(76, 14);
+            radioButtonSolteiro.Name = "radioButtonSolteiro";
+            radioButtonSolteiro.Size = new Size(65, 19);
+            radioButtonSolteiro.TabIndex = 13;
+            radioButtonSolteiro.TabStop = true;
+            radioButtonSolteiro.Text = "Solteiro";
+            radioButtonSolteiro.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioButtonCasado
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(6, 13);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(64, 19);
-            radioButton3.TabIndex = 12;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Casado";
-            radioButton3.UseVisualStyleBackColor = true;
+            radioButtonCasado.AutoSize = true;
+            radioButtonCasado.Location = new Point(6, 13);
+            radioButtonCasado.Name = "radioButtonCasado";
+            radioButtonCasado.Size = new Size(64, 19);
+            radioButtonCasado.TabIndex = 12;
+            radioButtonCasado.TabStop = true;
+            radioButtonCasado.Text = "Casado";
+            radioButtonCasado.UseVisualStyleBackColor = true;
+            radioButtonCasado.CheckedChanged += radioButton3_CheckedChanged;
             // 
             // cbSexo
             // 
@@ -219,6 +221,7 @@
             cbEstado.Name = "cbEstado";
             cbEstado.Size = new Size(167, 23);
             cbEstado.TabIndex = 12;
+            cbEstado.SelectedIndexChanged += cbEstado_SelectedIndexChanged;
             // 
             // txtCep
             // 
@@ -503,8 +506,8 @@
         private TextBox txtCelular;
         private TextBox txtTelefone;
         private TextBox txtEmail;
-        private RadioButton radioButton4;
-        private RadioButton radioButton3;
+        private RadioButton radioButtonSolteiro;
+        private RadioButton radioButtonCasado;
         private RadioButton radioBtnMasculino;
         private RadioButton radioBtnFeminino;
         private ComboBox cbEstado;
