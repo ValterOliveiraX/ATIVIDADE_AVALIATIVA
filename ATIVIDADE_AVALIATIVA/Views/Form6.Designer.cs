@@ -30,23 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cadastrar));
             groupBox1 = new GroupBox();
-            estadocivil = new GroupBox();
+            cbEstadoCivil = new GroupBox();
             radioButton4 = new RadioButton();
             radioButton3 = new RadioButton();
-            sexo = new GroupBox();
+            cbSexo = new GroupBox();
             radioBtnMasculino = new RadioButton();
             radioBtnFeminino = new RadioButton();
-            textNome = new TextBox();
+            txtNome = new TextBox();
             label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtpDataNasc = new DateTimePicker();
             label2 = new Label();
             groupBox2 = new GroupBox();
-            comboEstado = new ComboBox();
-            textCep = new TextBox();
-            textNumero = new TextBox();
-            textCidade = new TextBox();
-            textBairro = new TextBox();
-            textRua = new TextBox();
+            cbEstado = new ComboBox();
+            txtCep = new TextBox();
+            txtNumero = new TextBox();
+            txtCidade = new TextBox();
+            txtBairro = new TextBox();
+            txtRua = new TextBox();
             label1 = new Label();
             label8 = new Label();
             label7 = new Label();
@@ -54,9 +54,9 @@
             label5 = new Label();
             label4 = new Label();
             groupBox3 = new GroupBox();
-            textCelular = new TextBox();
-            textTelefone = new TextBox();
-            textEmail = new TextBox();
+            txtCelular = new TextBox();
+            txtTelefone = new TextBox();
+            txtEmail = new TextBox();
             label11 = new Label();
             label10 = new Label();
             label9 = new Label();
@@ -68,8 +68,8 @@
             toolStripButton1 = new ToolStripButton();
             toolStripLabel1 = new ToolStripLabel();
             groupBox1.SuspendLayout();
-            estadocivil.SuspendLayout();
-            sexo.SuspendLayout();
+            cbEstadoCivil.SuspendLayout();
+            cbSexo.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             menuStrip1.SuspendLayout();
@@ -78,11 +78,11 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(estadocivil);
-            groupBox1.Controls.Add(sexo);
-            groupBox1.Controls.Add(textNome);
+            groupBox1.Controls.Add(cbEstadoCivil);
+            groupBox1.Controls.Add(cbSexo);
+            groupBox1.Controls.Add(txtNome);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Controls.Add(dtpDataNasc);
             groupBox1.Controls.Add(label2);
             groupBox1.Location = new Point(12, 63);
             groupBox1.Name = "groupBox1";
@@ -91,16 +91,16 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Dados pessoais";
             // 
-            // estadocivil
+            // cbEstadoCivil
             // 
-            estadocivil.Controls.Add(radioButton4);
-            estadocivil.Controls.Add(radioButton3);
-            estadocivil.Location = new Point(421, 51);
-            estadocivil.Name = "estadocivil";
-            estadocivil.Size = new Size(151, 40);
-            estadocivil.TabIndex = 4;
-            estadocivil.TabStop = false;
-            estadocivil.Text = "Estado civil";
+            cbEstadoCivil.Controls.Add(radioButton4);
+            cbEstadoCivil.Controls.Add(radioButton3);
+            cbEstadoCivil.Location = new Point(421, 51);
+            cbEstadoCivil.Name = "cbEstadoCivil";
+            cbEstadoCivil.Size = new Size(151, 40);
+            cbEstadoCivil.TabIndex = 4;
+            cbEstadoCivil.TabStop = false;
+            cbEstadoCivil.Text = "Estado civil";
             // 
             // radioButton4
             // 
@@ -124,16 +124,16 @@
             radioButton3.Text = "Casado";
             radioButton3.UseVisualStyleBackColor = true;
             // 
-            // sexo
+            // cbSexo
             // 
-            sexo.Controls.Add(radioBtnMasculino);
-            sexo.Controls.Add(radioBtnFeminino);
-            sexo.Location = new Point(231, 51);
-            sexo.Name = "sexo";
-            sexo.Size = new Size(184, 40);
-            sexo.TabIndex = 3;
-            sexo.TabStop = false;
-            sexo.Text = "sexo";
+            cbSexo.Controls.Add(radioBtnMasculino);
+            cbSexo.Controls.Add(radioBtnFeminino);
+            cbSexo.Location = new Point(231, 51);
+            cbSexo.Name = "cbSexo";
+            cbSexo.Size = new Size(184, 40);
+            cbSexo.TabIndex = 3;
+            cbSexo.TabStop = false;
+            cbSexo.Text = "sexo";
             // 
             // radioBtnMasculino
             // 
@@ -157,12 +157,12 @@
             radioBtnFeminino.Text = "Feminino";
             radioBtnFeminino.UseVisualStyleBackColor = true;
             // 
-            // textNome
+            // txtNome
             // 
-            textNome.Location = new Point(65, 22);
-            textNome.Name = "textNome";
-            textNome.Size = new Size(687, 23);
-            textNome.TabIndex = 2;
+            txtNome.Location = new Point(65, 22);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(687, 23);
+            txtNome.TabIndex = 2;
             // 
             // label3
             // 
@@ -173,13 +173,13 @@
             label3.TabIndex = 1;
             label3.Text = "Data de nascimento";
             // 
-            // dateTimePicker1
+            // dtpDataNasc
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(124, 61);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(101, 23);
-            dateTimePicker1.TabIndex = 0;
+            dtpDataNasc.Format = DateTimePickerFormat.Short;
+            dtpDataNasc.Location = new Point(124, 61);
+            dtpDataNasc.Name = "dtpDataNasc";
+            dtpDataNasc.Size = new Size(101, 23);
+            dtpDataNasc.TabIndex = 0;
             // 
             // label2
             // 
@@ -192,12 +192,12 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(comboEstado);
-            groupBox2.Controls.Add(textCep);
-            groupBox2.Controls.Add(textNumero);
-            groupBox2.Controls.Add(textCidade);
-            groupBox2.Controls.Add(textBairro);
-            groupBox2.Controls.Add(textRua);
+            groupBox2.Controls.Add(cbEstado);
+            groupBox2.Controls.Add(txtCep);
+            groupBox2.Controls.Add(txtNumero);
+            groupBox2.Controls.Add(txtCidade);
+            groupBox2.Controls.Add(txtBairro);
+            groupBox2.Controls.Add(txtRua);
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(label8);
             groupBox2.Controls.Add(label7);
@@ -211,49 +211,49 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Endereço";
             // 
-            // comboEstado
+            // cbEstado
             // 
-            comboEstado.FormattingEnabled = true;
-            comboEstado.Items.AddRange(new object[] { "Acre - AC", "Alagoas - AL", "Amapá - AP", "Amazonas - AM", "Bahia - BA", "Ceará - CE", "Distrito Federal - DF", "Espírito Santo - ES", "Goiás - GO", "Maranhão - MA", "Mato Grosso - MT", "Mato Grosso do Sul - MS", "Minas Gerais - MG", "Pará - PA", "Paraíba - PB", "Paraná - PR", "Pernambuco - PE", "Piauí - PI", "Rio de Janeiro - RJ", "Rio Grande do Norte - RN", "Rio Grande do Sul - RS", "Rondônia - RO", "Roraima - RR", "Santa Catarina - SC", "São Paulo - SP", "Sergipe - SE", "Tocantins - TO" });
-            comboEstado.Location = new Point(585, 46);
-            comboEstado.Name = "comboEstado";
-            comboEstado.Size = new Size(167, 23);
-            comboEstado.TabIndex = 12;
+            cbEstado.FormattingEnabled = true;
+            cbEstado.Items.AddRange(new object[] { "Acre - AC", "Alagoas - AL", "Amapá - AP", "Amazonas - AM", "Bahia - BA", "Ceará - CE", "Distrito Federal - DF", "Espírito Santo - ES", "Goiás - GO", "Maranhão - MA", "Mato Grosso - MT", "Mato Grosso do Sul - MS", "Minas Gerais - MG", "Pará - PA", "Paraíba - PB", "Paraná - PR", "Pernambuco - PE", "Piauí - PI", "Rio de Janeiro - RJ", "Rio Grande do Norte - RN", "Rio Grande do Sul - RS", "Rondônia - RO", "Roraima - RR", "Santa Catarina - SC", "São Paulo - SP", "Sergipe - SE", "Tocantins - TO" });
+            cbEstado.Location = new Point(585, 46);
+            cbEstado.Name = "cbEstado";
+            cbEstado.Size = new Size(167, 23);
+            cbEstado.TabIndex = 12;
             // 
-            // textCep
+            // txtCep
             // 
-            textCep.Location = new Point(693, 19);
-            textCep.Name = "textCep";
-            textCep.Size = new Size(59, 23);
-            textCep.TabIndex = 11;
+            txtCep.Location = new Point(693, 19);
+            txtCep.Name = "txtCep";
+            txtCep.Size = new Size(59, 23);
+            txtCep.TabIndex = 11;
             // 
-            // textNumero
+            // txtNumero
             // 
-            textNumero.Location = new Point(585, 16);
-            textNumero.Name = "textNumero";
-            textNumero.Size = new Size(68, 23);
-            textNumero.TabIndex = 9;
+            txtNumero.Location = new Point(585, 16);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(68, 23);
+            txtNumero.TabIndex = 9;
             // 
-            // textCidade
+            // txtCidade
             // 
-            textCidade.Location = new Point(331, 44);
-            textCidade.Name = "textCidade";
-            textCidade.Size = new Size(173, 23);
-            textCidade.TabIndex = 8;
+            txtCidade.Location = new Point(331, 44);
+            txtCidade.Name = "txtCidade";
+            txtCidade.Size = new Size(173, 23);
+            txtCidade.TabIndex = 8;
             // 
-            // textBairro
+            // txtBairro
             // 
-            textBairro.Location = new Point(55, 46);
-            textBairro.Name = "textBairro";
-            textBairro.Size = new Size(220, 23);
-            textBairro.TabIndex = 7;
+            txtBairro.Location = new Point(55, 46);
+            txtBairro.Name = "txtBairro";
+            txtBairro.Size = new Size(220, 23);
+            txtBairro.TabIndex = 7;
             // 
-            // textRua
+            // txtRua
             // 
-            textRua.Location = new Point(93, 16);
-            textRua.Name = "textRua";
-            textRua.Size = new Size(411, 23);
-            textRua.TabIndex = 6;
+            txtRua.Location = new Point(93, 16);
+            txtRua.Name = "txtRua";
+            txtRua.Size = new Size(411, 23);
+            txtRua.TabIndex = 6;
             // 
             // label1
             // 
@@ -311,9 +311,9 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(textCelular);
-            groupBox3.Controls.Add(textTelefone);
-            groupBox3.Controls.Add(textEmail);
+            groupBox3.Controls.Add(txtCelular);
+            groupBox3.Controls.Add(txtTelefone);
+            groupBox3.Controls.Add(txtEmail);
             groupBox3.Controls.Add(label11);
             groupBox3.Controls.Add(label10);
             groupBox3.Controls.Add(label9);
@@ -324,26 +324,26 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Contatos";
             // 
-            // textCelular
+            // txtCelular
             // 
-            textCelular.Location = new Point(57, 79);
-            textCelular.Name = "textCelular";
-            textCelular.Size = new Size(180, 23);
-            textCelular.TabIndex = 5;
+            txtCelular.Location = new Point(57, 79);
+            txtCelular.Name = "txtCelular";
+            txtCelular.Size = new Size(180, 23);
+            txtCelular.TabIndex = 5;
             // 
-            // textTelefone
+            // txtTelefone
             // 
-            textTelefone.Location = new Point(63, 52);
-            textTelefone.Name = "textTelefone";
-            textTelefone.Size = new Size(174, 23);
-            textTelefone.TabIndex = 4;
+            txtTelefone.Location = new Point(63, 52);
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(174, 23);
+            txtTelefone.TabIndex = 4;
             // 
-            // textEmail
+            // txtEmail
             // 
-            textEmail.Location = new Point(53, 26);
-            textEmail.Name = "textEmail";
-            textEmail.Size = new Size(184, 23);
-            textEmail.TabIndex = 3;
+            txtEmail.Location = new Point(53, 26);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(184, 23);
+            txtEmail.TabIndex = 3;
             // 
             // label11
             // 
@@ -450,10 +450,10 @@
             Text = "cadastro";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            estadocivil.ResumeLayout(false);
-            estadocivil.PerformLayout();
-            sexo.ResumeLayout(false);
-            sexo.PerformLayout();
+            cbEstadoCivil.ResumeLayout(false);
+            cbEstadoCivil.PerformLayout();
+            cbSexo.ResumeLayout(false);
+            cbSexo.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             groupBox3.ResumeLayout(false);
@@ -477,12 +477,12 @@
         private ToolStripMenuItem arquivoToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpDataNasc;
         private Label label2;
         private Label label1;
-        private GroupBox sexo;
-        private TextBox textNome;
-        private GroupBox estadocivil;
+        private GroupBox cbSexo;
+        private TextBox txtNome;
+        private GroupBox cbEstadoCivil;
         private Button btnSalvar;
         private ToolStrip toolStrip1;
         private ToolStripButton toolStripButton1;
@@ -495,18 +495,18 @@
         private Label label11;
         private Label label10;
         private Label label9;
-        private TextBox textCep;
-        private TextBox textNumero;
-        private TextBox textCidade;
-        private TextBox textBairro;
-        private TextBox textRua;
-        private TextBox textCelular;
-        private TextBox textTelefone;
-        private TextBox textEmail;
+        private TextBox txtCep;
+        private TextBox txtNumero;
+        private TextBox txtCidade;
+        private TextBox txtBairro;
+        private TextBox txtRua;
+        private TextBox txtCelular;
+        private TextBox txtTelefone;
+        private TextBox txtEmail;
         private RadioButton radioButton4;
         private RadioButton radioButton3;
         private RadioButton radioBtnMasculino;
         private RadioButton radioBtnFeminino;
-        private ComboBox comboEstado;
+        private ComboBox cbEstado;
     }
 }
