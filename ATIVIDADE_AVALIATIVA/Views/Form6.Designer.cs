@@ -113,6 +113,7 @@
             radioButtonSolteiro.TabStop = true;
             radioButtonSolteiro.Text = "Solteiro";
             radioButtonSolteiro.UseVisualStyleBackColor = true;
+            radioButtonSolteiro.CheckedChanged += radioButtonSolteiro_CheckedChanged_1;
             // 
             // radioButtonCasado
             // 

@@ -14,37 +14,38 @@ namespace ATIVIDADE_AVALIATIVA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Criando instâncias dos modelos com os dados do formulário
-            PessoaModel pessoa = new PessoaModel
+            // Cria instâncias dos modelos com os dados do formulário
+            PessoaModel pessoa = new PessoaModel()
             {
                 Nome = txtNome.Text,
                 DataNasc = dtpDataNasc.Value,
-                EstadoCivil = cbEstadoCivil.Text,
-                Sexo = cbSexo.Text
+                //    cbEstadoCivil.SelectedItem.ToString(),
+                //    EstadoCivil = radioButton3_CheckedChanged.Checked.ToString(),
+                //   Sexo = rbMasculino.Checked ? "M" : (rbFeminino.Checked ? "F" : "Outro")
             };
 
-            EnderecoModel endereco = new EnderecoModel
+            EnderecoModel endereco = new EnderecoModel()
             {
                 NomeDaRua = txtRua.Text,
                 Bairro = txtBairro.Text,
                 Cidade = txtCidade.Text,
-                Numero = Convert.ToInt32(txtNumero.Text),
-                Estado = cbEstado.Text,
+                Numero = int.Parse(txtNumero.Text),
+                Estado = cbEstado.SelectedItem.ToString(),
                 Cep = txtCep.Text
             };
 
-            ContatoModel contato = new ContatoModel
+            ContatoModel contato = new ContatoModel()
             {
                 Email = txtEmail.Text,
                 Telefone = txtTelefone.Text,
                 Celular = txtCelular.Text
             };
 
-            // Criando uma instância do controlador
-            PessoaController controller = new PessoaController();
+            // Cria uma instância do controller
+            PessoaController pessoaController = new PessoaController();
 
-            // Inserindo os dados completos
-            controller.InserirPessoaCompleta(pessoa, contato, endereco);
+            // Chama o método para inserir os dados
+            pessoaController.InserirPessoaCompleta(pessoa, endereco, contato);
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,6 +88,15 @@ namespace ATIVIDADE_AVALIATIVA
         private void txtBairro_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void radioButtonSolteiro_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (radioButtonSolteiro.Checked)
+            {
+                //    return "M";
+
+            }
         }
     }
 }
