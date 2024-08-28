@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ATIVIDADE_AVALIATIVA.Controlers;
+using ATIVIDADE_AVALIATIVA.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +20,22 @@ namespace ATIVIDADE_AVALIATIVA
         }
 
         private void cadastro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string nome = txtNomeBusca.Text;
+            string estadoCivil = cbEstadoCivilBusca.SelectedItem?.ToString();
+
+            PessoaController pessoaController = new PessoaController();
+            List<PessoaModel> pessoas = pessoaController.BuscarPessoas(nome, estadoCivil);
+
+            dgvResultados.DataSource = pessoas;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

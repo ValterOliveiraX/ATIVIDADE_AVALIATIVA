@@ -31,12 +31,15 @@
             menuStrip1 = new MenuStrip();
             arquivoToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
-            textBox1 = new TextBox();
+            txtNomeBusca = new TextBox();
             label2 = new Label();
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
+            cbEstadoCivilBusca = new ComboBox();
+            btnBuscar = new Button();
+            dgvResultados = new DataGridView();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvResultados).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -44,7 +47,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(327, 24);
+            menuStrip1.Size = new Size(796, 24);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -61,12 +64,12 @@
             sairToolStripMenuItem.Size = new Size(92, 22);
             sairToolStripMenuItem.Text = "sair";
             // 
-            // textBox1
+            // txtNomeBusca
             // 
-            textBox1.Location = new Point(66, 22);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(215, 23);
-            textBox1.TabIndex = 2;
+            txtNomeBusca.Location = new Point(66, 22);
+            txtNomeBusca.Name = "txtNomeBusca";
+            txtNomeBusca.Size = new Size(539, 23);
+            txtNomeBusca.TabIndex = 2;
             // 
             // label2
             // 
@@ -79,30 +82,52 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(cbEstadoCivilBusca);
+            groupBox1.Controls.Add(txtNomeBusca);
+            groupBox1.Controls.Add(btnBuscar);
             groupBox1.Controls.Add(label2);
             groupBox1.Location = new Point(0, 27);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(315, 72);
+            groupBox1.Size = new Size(784, 85);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Dados pessoais";
             // 
-            // groupBox2
+            // cbEstadoCivilBusca
             // 
-            groupBox2.Location = new Point(6, 105);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(309, 331);
-            groupBox2.TabIndex = 5;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "resultados de busca";
+            cbEstadoCivilBusca.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbEstadoCivilBusca.FormattingEnabled = true;
+            cbEstadoCivilBusca.Items.AddRange(new object[] { "Casado", "Solteiro" });
+            cbEstadoCivilBusca.Location = new Point(38, 51);
+            cbEstadoCivilBusca.Name = "cbEstadoCivilBusca";
+            cbEstadoCivilBusca.Size = new Size(121, 23);
+            cbEstadoCivilBusca.TabIndex = 7;
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.Location = new Point(611, 22);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(145, 55);
+            btnBuscar.TabIndex = 6;
+            btnBuscar.Text = "BUSCAR";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
+            // dgvResultados
+            // 
+            dgvResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvResultados.Location = new Point(6, 118);
+            dgvResultados.Name = "dgvResultados";
+            dgvResultados.Size = new Size(778, 318);
+            dgvResultados.TabIndex = 7;
+            dgvResultados.CellContentClick += dataGridView1_CellContentClick;
             // 
             // buscar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(327, 448);
-            Controls.Add(groupBox2);
+            ClientSize = new Size(796, 448);
+            Controls.Add(dgvResultados);
             Controls.Add(groupBox1);
             Controls.Add(menuStrip1);
             Name = "buscar";
@@ -112,6 +137,7 @@
             menuStrip1.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvResultados).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -121,9 +147,11 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem arquivoToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
-        private TextBox textBox1;
+        private TextBox txtNomeBusca;
         private Label label2;
         private GroupBox groupBox1;
-        private GroupBox groupBox2;
+        private Button btnBuscar;
+        private DataGridView dgvResultados;
+        private ComboBox cbEstadoCivilBusca;
     }
 }
