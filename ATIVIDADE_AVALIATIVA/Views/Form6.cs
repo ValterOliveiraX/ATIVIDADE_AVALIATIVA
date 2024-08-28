@@ -19,6 +19,7 @@ namespace ATIVIDADE_AVALIATIVA
             {
                 Nome = txtNome.Text,
                 DataNasc = dtpDataNasc.Value,
+                //ha um erro aqui
                 //    cbEstadoCivil.SelectedItem.ToString(),
                 //    EstadoCivil = radioButton3_CheckedChanged.Checked.ToString(),
                 //   Sexo = rbMasculino.Checked ? "M" : (rbFeminino.Checked ? "F" : "Outro")
