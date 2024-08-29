@@ -9,6 +9,7 @@ using System.Xml.Serialization;
 namespace ATIVIDADE_AVALIATIVA.Controlers
 {
     using ATIVIDADE_AVALIATIVA.DAO;
+    using ATIVIDADE_AVALIATIVA.DTO;
     using ATIVIDADE_AVALIATIVA.Models;
     using MySql.Data.MySqlClient;
     using System;
@@ -88,6 +89,7 @@ namespace ATIVIDADE_AVALIATIVA.Controlers
             }
             return pessoas;
         }
+        //busca completa
     }
 }
 

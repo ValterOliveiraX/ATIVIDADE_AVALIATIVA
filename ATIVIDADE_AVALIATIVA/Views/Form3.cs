@@ -39,5 +39,10 @@ namespace ATIVIDADE_AVALIATIVA
         {
 
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

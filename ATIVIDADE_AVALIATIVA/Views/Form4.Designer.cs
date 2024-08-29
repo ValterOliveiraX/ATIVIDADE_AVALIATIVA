@@ -36,7 +36,7 @@
             btnExcluir = new Button();
             groupBox1 = new GroupBox();
             label2 = new Label();
-            BtnConfirmar = new Button();
+            confirmar = new Button();
             dgvResultados = new DataGridView();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -62,8 +62,9 @@
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(180, 22);
+            sairToolStripMenuItem.Size = new Size(92, 22);
             sairToolStripMenuItem.Text = "sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // cbEstadoCivilBusca
             // 
@@ -90,6 +91,7 @@
             btnExcluir.TabIndex = 6;
             btnExcluir.Text = "BUSCA P/ EXCLUSAO";
             btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // groupBox1
             // 
@@ -113,22 +115,23 @@
             label2.TabIndex = 0;
             label2.Text = "nome";
             // 
-            // BtnConfirmar
+            // confirmar
             // 
-            BtnConfirmar.Location = new Point(313, 381);
-            BtnConfirmar.Name = "BtnConfirmar";
-            BtnConfirmar.Size = new Size(145, 55);
-            BtnConfirmar.TabIndex = 7;
-            BtnConfirmar.Text = "BUSCA P/ EXCLUSAO";
-            BtnConfirmar.UseVisualStyleBackColor = true;
+            confirmar.Location = new Point(313, 381);
+            confirmar.Name = "confirmar";
+            confirmar.Size = new Size(145, 55);
+            confirmar.TabIndex = 7;
+            confirmar.Text = "CONFIRMAR?";
+            confirmar.UseVisualStyleBackColor = true;
             // 
             // dgvResultados
             // 
             dgvResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvResultados.Location = new Point(6, 118);
             dgvResultados.Name = "dgvResultados";
-            dgvResultados.Size = new Size(778, 244);
+            dgvResultados.Size = new Size(775, 244);
             dgvResultados.TabIndex = 8;
+            dgvResultados.CellContentClick += dgvResultados_CellContentClick;
             // 
             // excluir
             // 
@@ -136,7 +139,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(793, 448);
             Controls.Add(dgvResultados);
-            Controls.Add(BtnConfirmar);
+            Controls.Add(confirmar);
             Controls.Add(groupBox1);
             Controls.Add(menuStrip1);
             Name = "excluir";
@@ -160,7 +163,7 @@
         private Button btnExcluir;
         private GroupBox groupBox1;
         private Label label2;
-        private Button BtnConfirmar;
+        private Button confirmar;
         private DataGridView dgvResultados;
     }
 }

@@ -1,7 +1,9 @@
-﻿using ATIVIDADE_AVALIATIVA.Models;
+﻿using ATIVIDADE_AVALIATIVA.DTO;
+using ATIVIDADE_AVALIATIVA.Models;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -103,8 +105,9 @@ namespace ATIVIDADE_AVALIATIVA.DAO
                 }
             }
         }
+        //buscar pessoa completa
 
 
-
+        //--------------fim ----------------------------------------------
     }
 }

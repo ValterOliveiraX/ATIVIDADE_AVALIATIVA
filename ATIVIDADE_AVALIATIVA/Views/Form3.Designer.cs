@@ -61,8 +61,9 @@
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(92, 22);
+            sairToolStripMenuItem.Size = new Size(180, 22);
             sairToolStripMenuItem.Text = "sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // txtNomeBusca
             // 

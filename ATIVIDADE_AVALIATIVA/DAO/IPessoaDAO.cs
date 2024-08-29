@@ -1,4 +1,5 @@
-﻿using ATIVIDADE_AVALIATIVA.Models;
+﻿using ATIVIDADE_AVALIATIVA.DTO;
+using ATIVIDADE_AVALIATIVA.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace ATIVIDADE_AVALIATIVA.DAO
         void Atualizar(PessoaModel pessoa);
         void Excluir(int idPessoa);
         void InserirPessoaCompleta(PessoaModel pessoa, EnderecoModel endereco, ContatoModel contato);
+
 
     }
 }
